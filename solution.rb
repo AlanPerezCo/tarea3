@@ -45,11 +45,12 @@ class LinkedList
     end
 end
 puts "Give me the values until you press -1:"
-input=gets.chomp.to_i
+input=gets.chomp
 ending=-1
+ending=ending.to_s
 output = LinkedList.new(input)
 while input!=ending
-    input=gets.chomp.to_i
+    input=gets.chomp
     if input!=ending
         output.add(input)
     end
@@ -57,7 +58,7 @@ end
 puts "Displaying the linked list:"
 output.display
 puts "Now, give me a value to delete from the list"
-input=gets.chomp.to_i
+input=gets.chomp
 output.delete(input)
 puts "Displaying the linked list againg"
 output.display
